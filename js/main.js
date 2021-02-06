@@ -63,34 +63,36 @@ function changeCss() {
     }
 }
 
-firstScroll.forEach(e => {
-    e.addEventListener("click", function() {
-        document.querySelector("header").scrollIntoView({
-            behavior: 'smooth'
+(function(){
+    firstScroll.forEach(e => {
+        e.addEventListener("click", function() {
+            document.querySelector("header").scrollIntoView({
+                behavior: 'smooth'
+            })
         })
-    })
-});
-
-secondScroll.forEach(e => {
-    e.addEventListener("click", function() {
-        document.querySelector(".offers-section").scrollIntoView({
-            behavior: 'smooth'
+    });
+    
+    secondScroll.forEach(e => {
+        e.addEventListener("click", function() {
+            document.querySelector(".offers-section").scrollIntoView({
+                behavior: 'smooth'
+            })
         })
-    })
-});
-
-thirdScroll.forEach(e => {
-    e.addEventListener("click", function() {
-        document.querySelector(".contact").scrollIntoView({
-            behavior: 'smooth'
+    });
+    
+    thirdScroll.forEach(e => {
+        e.addEventListener("click", function() {
+            document.querySelector(".contact").scrollIntoView({
+                behavior: 'smooth'
+            })
         })
-    })
-});
-
-Controller.cardAdder(cardArray, container);
-
-window.addEventListener("scroll", changeCss, false);
-
-activeClassHeader.addEventListener("click", function() {
-    bodyElement.scrollY = 500
-});
+    });
+    
+    Controller.cardAdder(cardArray, container);
+    
+    window.addEventListener("scroll", changeCss, false);
+    
+    activeClassHeader.addEventListener("click", function() {
+        bodyElement.scrollY = 500
+    });
+})();

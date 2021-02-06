@@ -6,8 +6,6 @@ import { cardArray } from './card.js'
 const Controller = new ModelViewController();
 
 const container = document.querySelector(".project-container");
-const projectContainer = document.querySelector(".projects");
-const footer = document.querySelector(".footer");
 
 const headerOuterContainer = document.querySelector(".header-container-outer");
 const activeHeader = document.querySelector(".firstScroll");
@@ -17,8 +15,6 @@ const activeClassHeader = document.querySelector(".active");
 const firstScroll = document.querySelectorAll(".firstScroll");
 const secondScroll = document.querySelectorAll(".secondScroll");
 const thirdScroll = document.querySelectorAll(".thirdScroll");
-
-let ScrollArray = new Array(firstScroll, secondScroll, thirdScroll);
 
 function changeCss() {
     if (this.scrollY >= 454) {

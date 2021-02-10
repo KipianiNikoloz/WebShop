@@ -63,7 +63,7 @@ function changeCss() {
     }
 }
 
-(function(){
+(function() {
     firstScroll.forEach(e => {
         e.addEventListener("click", function() {
             document.querySelector("header").scrollIntoView({
@@ -71,7 +71,7 @@ function changeCss() {
             })
         })
     });
-    
+
     secondScroll.forEach(e => {
         e.addEventListener("click", function() {
             document.querySelector(".offers-section").scrollIntoView({
@@ -79,7 +79,7 @@ function changeCss() {
             })
         })
     });
-    
+
     thirdScroll.forEach(e => {
         e.addEventListener("click", function() {
             document.querySelector(".contact").scrollIntoView({
@@ -87,11 +87,11 @@ function changeCss() {
             })
         })
     });
-    
+
     Controller.cardAdder(cardArray, container);
-    
+
     window.addEventListener("scroll", changeCss, false);
-    
+
     activeClassHeader.addEventListener("click", function() {
         bodyElement.scrollY = 500
     });

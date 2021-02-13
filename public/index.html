@@ -304,26 +304,6 @@
             </section>
         </section>
     </main>
-
-    <script src="https://smtpjs.com/v3/smtp.js">
-        const SubmitBtn = document.querySelector(".login100-form-btn");
-        const NameInput = document.querySelector("#fullname");
-        const EmailInput = document.querySelector("#email");
-        const TextInput = document.querySelector("#textholder")
-        const NumberInput = document.querySelector("#mobilenumber")
-
-        SubmitBtn.addEventListener("click", function(){
-            Email.send({
-                SecureToken : "4f1ded55-aa9e-495c-83bc-70db007eb2cf",
-                To : 'nikolozkipiani2005@gmail.com',
-                From : `${EmailInput.value}`,
-                Subject : "Website",
-                Body : `Text: ${TextInput.value}, Name: ${NameInput.value}, Number: ${NumberInput.value}`
-            }).then(
-                alert("Mail has been sent successfully")
-        );
-    })
-    </script>
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script type="module" src="../js/modelcontrol.js"></script>
     <script type="module" src="../js/card.js"></script>

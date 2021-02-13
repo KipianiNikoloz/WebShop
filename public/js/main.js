@@ -16,6 +16,12 @@ const firstScroll = document.querySelectorAll(".firstScroll");
 const secondScroll = document.querySelectorAll(".secondScroll");
 const thirdScroll = document.querySelectorAll(".thirdScroll");
 
+const SubmitBtn = document.querySelector(".login100-form-btn");
+const NameInput = document.querySelector("#fullname");
+const EmailInput = document.querySelector("#email");
+const TextInput = document.querySelector("#textholder")
+const NumberInput = document.querySelector("#mobilenumber")
+
 function changeCss() {
     if (this.scrollY >= 454) {
         headerOuterContainer.style.background = "rgb(32, 29, 29)"
@@ -96,3 +102,4 @@ function changeCss() {
         bodyElement.scrollY = 500
     });
 })();
+

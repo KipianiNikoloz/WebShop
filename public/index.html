@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>WebShop | Home</title>
+    <title>WebShop Emails added| Home</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -222,19 +222,6 @@
                     </ul>
                     <span>220-270$</span>
                 </div>
-                <div class="offer-card-selfmade" data-aos="zoom-in-left">
-                    <h3>Custom Order</h3>
-                    <hr>
-                    <h5>Customized by user</h5>
-                    <p>Custom order just for you</p>
-                    <ul>
-                        <li><i class="fas fa-check"></i> 7-10 Day Delivery</li>
-                        <li><i class="fas fa-check"></i> Responsive</li>
-                        <li><i class="fas fa-check"></i> Unlimited Revisions</li>
-                        <li><i class="fas fa-check"></i> Content Upload</li>
-                    </ul>
-                    <span>Depends on order complexity</span>
-                </div>
             </article>
         </section>
         <!--Contact-->
@@ -258,7 +245,7 @@
                             </span>
 
                             <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                                <input class="input100" type="text" name="text" placeholder="Full Name">
+                                <input id="fullname" class="input100" type="text" name="text" placeholder="Full Name">
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
                                     <i class="fa fa-address-book" aria-hidden="true"></i>
@@ -266,7 +253,7 @@
                             </div>
 
                             <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                                <input class="input100" type="text" name="Number" placeholder="Number">
+                                <input id="mobilenumber" class="input100" type="text" name="Number" placeholder="Number">
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
                                     <i class="fa fa-phone" aria-hidden="true"></i>
@@ -274,7 +261,7 @@
                             </div>
 
                             <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                                <input class="input100" type="text" name="email" placeholder="Email">
+                                <input id="email" class="input100" type="text" name="email" placeholder="Email">
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -282,7 +269,7 @@
                             </div>
 
                             <div class="wrap-input100 validate-input" data-validate="Password is required">
-                                <input class="input100" type="text" name="text" placeholder="Text Us">
+                                <input id="textholder" class="input100" type="text" name="text" placeholder="Text Us">
                                 <span class="focus-input100"></span>
                                 <span class="symbol-input100">
                                     <i class="fa fa-comments-o" aria-hidden="true"></i>
@@ -318,6 +305,25 @@
         </section>
     </main>
 
+    <script src="https://smtpjs.com/v3/smtp.js">
+        const SubmitBtn = document.querySelector(".login100-form-btn");
+        const NameInput = document.querySelector("#fullname");
+        const EmailInput = document.querySelector("#email");
+        const TextInput = document.querySelector("#textholder")
+        const NumberInput = document.querySelector("#mobilenumber")
+
+        SubmitBtn.addEventListener("click", function(){
+            Email.send({
+                SecureToken : "4f1ded55-aa9e-495c-83bc-70db007eb2cf",
+                To : 'nikolozkipiani2005@gmail.com',
+                From : `${EmailInput.value}`,
+                Subject : "Website",
+                Body : `Text: ${TextInput.value}, Name: ${NameInput.value}, Number: ${NumberInput.value}`
+            }).then(
+            message => alert(message)
+        );
+    })
+    </script>
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script type="module" src="../js/modelcontrol.js"></script>
     <script type="module" src="../js/card.js"></script>

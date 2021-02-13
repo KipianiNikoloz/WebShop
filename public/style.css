@@ -404,22 +404,29 @@ main {
     justify-content: center
 }
 
-.footer aside:last-child ul {
+.footer ul {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0
 }
 
-.footer aside:last-child li {
+.footer li {
     list-style: none;
     margin: 10px;
     font-size: 18px
 }
 
-.footer aside:last-child a {
+.footer a {
     color: #fff;
     text-decoration: none
+}
+
+.footer img {
+    width: 150px;
+    height: 70px;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 .offers-section {
@@ -849,6 +856,15 @@ iframe {
     }
     .container-login100 {
         flex-direction: row
+    }
+    .footer img {
+        width: 140px;
+        height: 60px;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    .footer p {
+        font-size: 14px;
     }
 }
 
